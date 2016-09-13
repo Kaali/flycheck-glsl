@@ -46,7 +46,8 @@
   See URL https://www.khronos.org/opengles/sdk/tools/Reference-Compiler/"
   :command ("glslangValidator" source)
   :error-patterns
-  ((error line-start "ERROR: " column ":" line ": " (message) line-end))
+  ((error line-start "ERROR: " column ":" line ": " (message) line-end)
+   (warning line-start "WARNING: " column ":" line ": " (message) line-end))
   :modes glsl-mode)
 
 (add-to-list 'flycheck-checkers 'glsl-lang-validator)
